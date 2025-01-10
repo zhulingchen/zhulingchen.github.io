@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "在GitHub Pages搭建Jekyll博客"
+title: "打造自己的Perplexity — 本地部署 Gemini Search前端"
 date: 2024-01-10
 categories: [技术笔记]
 tags: [Jekyll, GitHub Pages]
@@ -51,7 +51,7 @@ tags: [Jekyll, GitHub Pages]
 
 ### 1. 克隆代码
 
-首先，打开你的终端（Windows 用户可以使用 PowerShell 或者 Git Bash），并执行以下命令来克隆 Gemini-Search 项目的代码：
+首先，打开你的终端（Windows 用户可以使用 cmd, PowerShell 或者 Git Bash），并执行以下命令来克隆 Gemini-Search 项目的代码：
 
 ```bash
 git clone https://github.com/ammaarreshi/Gemini-Search.git
@@ -59,6 +59,10 @@ cd Gemini-Search
 ```
 
 这会将项目代码下载到你的本地电脑，并进入项目文件夹。
+
+（然而，这个哥们把node_modules/目录也push进repo了，手动狗头……所以clone的时候可能需要多等几分钟；repo上好几个PR都在吐槽这个事情……）
+
+![tfugj4n3l6ez](https://github.com/user-attachments/assets/4e1d61b3-eb1a-452c-83d9-f737faf3bbe3)
 
 ### 2. 安装依赖
 
@@ -88,9 +92,17 @@ npm run dev
 
 如果一切顺利，你将看到终端输出类似 "serving on port 3000" 的信息。
 
+![image](https://github.com/user-attachments/assets/6484be0c-7f7d-4944-ac5b-ebf181016574)
+
 ### 5. 访问应用
 
-打开你的浏览器，输入 http://localhost:3000，你就可以看到 Gemini-Search 的用户界面了。现在你就可以开始使用 Gemini 模型进行本地搜索了。
+打开你的浏览器，输入 http://localhost:3000，你就可以看到 Gemini-Search 的用户界面了。现在你就可以开始使用 Gemini 2.0 模型进行本地搜索了。
+
+以下为运行截图。
+
+![image](https://github.com/user-attachments/assets/f5b39b96-14e4-4897-a461-6f33efeef010)
+
+![image](https://github.com/user-attachments/assets/60ce4041-ad47-453a-99f6-4d7d95e8a2bb)
 
 ### 6. 产品部署
 

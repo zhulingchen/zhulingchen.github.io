@@ -3,7 +3,7 @@ layout: post
 title: "打造自己的Perplexity — 本地部署 Gemini Search前端"
 date: 2024-01-10
 categories: [技术笔记]
-tags: [Jekyll, GitHub Pages]
+tags: Gemini AI LLM github
 ---
 
 # 打造自己的Perplexity — 本地部署 Gemini Search前端

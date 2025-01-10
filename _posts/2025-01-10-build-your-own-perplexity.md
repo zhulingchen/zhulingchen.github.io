@@ -1,13 +1,10 @@
 ---
 layout: post
 title: "打造自己的Perplexity — 本地部署 Gemini Search前端"
-date: 2024-01-10
-categories: [技术笔记]
+date:   2025-01-10 11:00:00 -0500
+categories: 技术笔记
 tags: Gemini AI LLM github
 ---
-
-# 打造自己的Perplexity — 本地部署 Gemini Search前端
-
 
 ## 欢迎来到我的公众号
 

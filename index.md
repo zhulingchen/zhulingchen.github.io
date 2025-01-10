@@ -5,13 +5,13 @@ layout: default
 # Latest Posts
 
 {% raw %}{% for post in site.posts %}
-## [{{ post.title }}]({{ post.url }})
+## [{{ post.title }}]({{ post.url | relative_url }})
 
 *Posted on {{ post.date | date: "%Y-%m-%d" }}*
 
 {{ post.excerpt }}
 
-[Read more]({{ post.url }})
+[Read more]({{ post.url | relative_url }})
 
 ---
 {% endfor %}{% endraw %}

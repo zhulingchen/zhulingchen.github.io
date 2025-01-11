@@ -8,11 +8,25 @@ tags: AI Cursor Prompt
 
 ## 前言
 
-现在大家都在用Cursor AI Code Editor写代码了吧，最起码能用它搭个项目的脚手架，就像我之前在做[我的技术博客](https://zhulingchen.github.io/)，用Cursor可以简化很多步骤。
+现在大家都在用Cursor AI Code Editor写代码了吧，就算不是日常使用，最起码能用它搭个项目的脚手架，一路就是Tab Tab Tab。
+
+就像我之前在做一个基于Markdown格式的[我的技术博客](https://zhulingchen.github.io/)，我完全都不会Jekyll，很多前端HTML和CSS的知识也都忘得七七八八了，但只要能清晰地描述诉求，Cursor就能很快帮你生成代码，简化了很多思考和debug的流程。
 
 ![image](https://github.com/user-attachments/assets/ce5387b1-198c-41b1-b220-b747a516ac03)
 
-最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的 **Cursor AI Code Editor 智能指令**，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行，就能让你的开发工作变得既轻松又有趣！
+最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的 **Cursor AI Code Editor 智能指令**，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行。
+
+# # 什么是 .cursorrules 文件？
+
+.cursorrules 文件是自定义指令，用于指导 Cursor 中的 AI 助手，在解释代码、生成建议和回应查询时调整其行为。Cursor 规则有两种类型：
+- 全局规则：在 Cursor 设置中的“常规” > “AI 规则”下设置。这些规则适用于您所有的项目。
+- 项目特定规则：在项目根目录中的 .cursorrules 文件中定义。这些规则仅适用于该项目。
+
+通过项目的 .cursorrules 文件，您可以：
+- 自定义 AI 响应以匹配您的编码风格
+- 强制执行团队的编码标准
+- 提高代码的一致性和质量
+- 精简您的开发工作流程
 
 ## 有了这些“模板”，能干嘛？
 

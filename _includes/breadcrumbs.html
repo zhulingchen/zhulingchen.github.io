@@ -1,0 +1,13 @@
+{% if page.url != "/" %}
+<nav class="breadcrumbs" aria-label="breadcrumb">
+  <ol>
+    <li>
+      <a href="/">Home</a>
+      <span class="separator">/</span>
+    </li>
+    <li class="current">
+      {{ page.title }}
+    </li>
+  </ol>
+</nav>
+{% endif %}

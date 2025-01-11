@@ -8,19 +8,13 @@ tags: AI Cursor Prompt
 
 ## 前言
 
-现在大家都在用Cursor AI Code Editor写代码了吧，最起码能用它搭个项目的脚手架，简化了很多步骤。
+现在大家都在用Cursor AI Code Editor写代码了吧，最起码能用它搭个项目的脚手架，就像我之前在做[我的技术博客](https://zhulingchen.github.io/)，用Cursor可以简化很多步骤。
 
+![image](https://github.com/user-attachments/assets/ce5387b1-198c-41b1-b220-b747a516ac03)
 
-
-最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的 **Cursor AI Code Editor 智能指令**，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件，就能让你的开发工作变得既轻松又有趣！
+最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的 **Cursor AI Code Editor 智能指令**，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行，就能让你的开发工作变得既轻松又有趣！
 
 ## 有了这些“模板”，能干嘛？
-
-有人说：
-
-> “100多个Cursor AI提示模板，帮助用Python、TypeScript、React等构建全栈应用。此外，你还可以使用模板让其具备API、LLM和智能代理的专业功能。”
-
-读到这里，你可能会和我一样感到好奇：**这些模板竟然还能让它具备 API、LLM 和智能代理的专业功能？这又是什么神操作？**
 
 其实，道理并不复杂：**在这些模板里，包含了如何调用和配置各种服务的预设信息**，比方说——
 
@@ -38,4 +32,6 @@ tags: AI Cursor Prompt
 
 ## 4. 结语
 
-如果你也想体验一下传说中的“自动化”与“人工智能驱动”开发，不妨去 [Cursor Directory](https://cursor.directory/) 逛逛，尝试为自己的项目加上这些有趣的模板。**把握住新一代开发方式，没准儿你的下一个创意就能借助智能代理一飞冲天！**
+如果你也想体验一下传说中的“自动化”与“人工智能驱动”开发，不妨去 [Cursor Directory](https://cursor.directory/) 逛逛，尝试为自己的项目加上这些有趣的模板。
+
+**把握住新一代开发方式，没准儿你的下一个创意就能借助智能代理一飞冲天！**

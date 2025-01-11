@@ -113,22 +113,22 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Add sidebar content
   sidebar.innerHTML = `
-    <h2>Articles by Month</h2>
+    <h2>Articles</h2>
     {% assign postsByMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
     {% for month in postsByMonth %}
-      <div class="month-section">
+        <div class="month-section">
         <div class="month-header">{{ month.name }}</div>
         <ul class="month-posts">
-          {% for post in month.items %}
+            {% for post in month.items %}
             <li>
-              <a href="{{ post.url }}">
-                {{ post.title }}
-                <small>{{ post.date | date: "%B %-d, %Y" }}</small>
-              </a>
+                <a href="{{ post.url }}" style="display: flex; flex-direction: column; gap: 0.25rem;">
+                <small style="color: #666; font-size: 0.85rem;">{{ post.date | date: "%B %-d, %Y" }}</small>
+                <span>{{ post.title }}</span>
+                </a>
             </li>
-          {% endfor %}
+            {% endfor %}
         </ul>
-      </div>
+        </div>
     {% endfor %}
   `;
   

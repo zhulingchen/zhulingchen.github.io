@@ -23,6 +23,7 @@ description: >-
   My tech blog website hosted at GitHub
 url: "https://zhulingchen.github.io/"
 baseurl: "" # the subpath of your site, e.g. /blog
+repository: zhulingchen/zhulingchen.github.io
 
 author:
   name: "猫哥"

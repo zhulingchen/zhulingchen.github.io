@@ -10,7 +10,7 @@ layout: default
     </h1>
     
     <div class="post-meta">
-      Posted on {{ post.date | date: "%Y-%m-%d" }}
+      Posted on {{ post.date | date: "%B %-d, %Y" }}
     </div>
 
     <div class="post-excerpt">

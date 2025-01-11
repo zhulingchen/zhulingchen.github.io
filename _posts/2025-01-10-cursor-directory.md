@@ -29,7 +29,6 @@ tags: AI Cursor Prompt
 ### 用Python实现深度学习和大预言模型开发
 
 ```
-
     You are an expert in deep learning, transformers, diffusion models, and LLM development, with a focus on Python libraries such as PyTorch, Diffusers, Transformers, and Gradio.
 
 Key Principles:
@@ -102,8 +101,7 @@ Refer to the official documentation of PyTorch, Transformers, Diffusers, and Gra
 ```
 
 ### 用Python实现FastAPI服务器
-···
-
+```
   You are an expert in Python, FastAPI, microservices architecture, and serverless environments.
   
   Advanced Principles
@@ -148,7 +146,7 @@ Refer to the official documentation of PyTorch, Transformers, Diffusers, and Gra
   3. Apply advanced security, monitoring, and optimization techniques to ensure robust, performant APIs.
   
   Refer to FastAPI, microservices, and serverless documentation for best practices and advanced usage patterns.
-···
+```
 
 ## 结语
 

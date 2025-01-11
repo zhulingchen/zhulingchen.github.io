@@ -1,0 +1,131 @@
+<!-- Sidebar and Toggle Button -->
+<style>
+    .nav-toggle {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      z-index: 100;
+      background: #157878;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .nav-sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 300px;
+      background: white;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 99;
+      overflow-y: auto;
+      padding: 4rem 1rem 1rem;
+    }
+    
+    .nav-sidebar.active {
+      transform: translateX(0);
+    }
+    
+    .nav-sidebar h2 {
+      color: #157878;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .nav-sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-sidebar li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .nav-sidebar a {
+      color: #606c71;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+    
+    .nav-sidebar a:hover {
+      background-color: #f0f0f0;
+      color: #157878;
+    }
+    
+    .main-content {
+      transition: margin-left 0.3s ease;
+    }
+    
+    .main-content.shifted {
+      margin-left: 300px;
+    }
+    
+    @media screen and (max-width: 768px) {
+      .nav-sidebar {
+        width: 100%;
+      }
+      
+      .main-content.shifted {
+        margin-left: 0;
+      }
+    }
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleButton = document.createElement('button');
+      toggleButton.className = 'nav-toggle';
+      toggleButton.innerHTML = '☰';
+      
+      const sidebar = document.createElement('nav');
+      sidebar.className = 'nav-sidebar';
+      
+      // Add sidebar content
+      sidebar.innerHTML = `
+        <h2>Articles</h2>
+        <ul>
+          {% for post in site.posts %}
+            <li>
+              <a href="{{ post.url }}">
+                {{ post.title }}
+                <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      `;
+      
+      document.body.prepend(toggleButton);
+      document.body.prepend(sidebar);
+      
+      const mainContent = document.querySelector('.main-content');
+      
+      toggleButton.addEventListener('click', function() {
+        sidebar.classList.toggle('active');
+        mainContent.classList.toggle('shifted');
+      });
+      
+      // Close sidebar when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!sidebar.contains(event.target) && 
+            !toggleButton.contains(event.target) && 
+            sidebar.classList.contains('active')) {
+          sidebar.classList.remove('active');
+          mainContent.classList.remove('shifted');
+        }
+      });
+    });
+    </script>

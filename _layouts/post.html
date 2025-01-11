@@ -2,13 +2,20 @@
 layout: default
 ---
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
-<h1>{{ page.title }}</h1>
+<article class="post">
+  <header class="post-header">
+    <div class="post-date">{{ page.date | date: "%B %-d, %Y" }}</div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="view">by {{ page.author | default: site.author.name }}</p>
+  </header>
 
-<p class="view">by {{ page.author | default: site.author.name }}</p>
+  <div class="post-content">
+    {{content}}
+  </div>
 
-{{content}}
-
-{% if page.tags %}
-  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
-{% endif %}
+  {% if page.tags %}
+    <footer class="post-footer">
+      <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+    </footer>
+  {% endif %}
+</article>

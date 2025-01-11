@@ -28,7 +28,7 @@
       transition: transform 0.3s ease;
       z-index: 99;
       overflow-y: auto;
-      padding: 4rem 1rem 1rem;
+      padding: 4rem 1rem 1rem 4rem;
     }
     
     .nav-sidebar.active {
@@ -99,6 +99,10 @@
       .main-content.shifted {
         margin-left: 0;
       }
+
+      .nav-sidebar .fixed-bottom {
+        width: 100%;
+      }
     }
 </style>
     
@@ -130,6 +134,22 @@ document.addEventListener('DOMContentLoaded', function() {
         </ul>
         </div>
     {% endfor %}
+
+    <!-- Fixed bottom section for sidebar -->
+    <div style="position: fixed; bottom: 0; left: 0; width: 300px; padding: 1rem; background: white; border-top: 1px solid #eaecef;">
+      <ul style="margin: 0; padding: 0; list-style: none;">
+        <li>
+          <a href="/sitemap.xml" style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3v18h18" />
+              <circle cx="9" cy="9" r="2" />
+              <path d="M17 17H9v-8" />
+            </svg>
+            Sitemap
+          </a>
+        </li>
+      </ul>
+    </div>
   `;
   
   document.body.prepend(toggleButton);

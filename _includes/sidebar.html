@@ -64,6 +64,24 @@
       background-color: #f0f0f0;
       color: #157878;
     }
+
+    .month-section {
+      margin-bottom: 1.5rem;
+    }
+
+    .month-header {
+      color: #157878;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+    }
+
+    .month-posts {
+      padding-left: 1rem;
+    }
     
     .main-content {
       transition: margin-left 0.3s ease;
@@ -82,22 +100,26 @@
         margin-left: 0;
       }
     }
-    </style>
+</style>
     
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const toggleButton = document.createElement('button');
-      toggleButton.className = 'nav-toggle';
-      toggleButton.innerHTML = '☰';
-      
-      const sidebar = document.createElement('nav');
-      sidebar.className = 'nav-sidebar';
-      
-      // Add sidebar content
-      sidebar.innerHTML = `
-        <h2>Articles</h2>
-        <ul>
-          {% for post in site.posts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButton = document.createElement('button');
+  toggleButton.className = 'nav-toggle';
+  toggleButton.innerHTML = '☰';
+  
+  const sidebar = document.createElement('nav');
+  sidebar.className = 'nav-sidebar';
+  
+  // Add sidebar content
+  sidebar.innerHTML = `
+    <h2>Articles by Month</h2>
+    {% assign postsByMonth = site.posts | group_by_exp: "post", "post.date | date: '%Y-%m'" %}
+    {% for month in postsByMonth %}
+      <div class="month-section">
+        <div class="month-header">{{ month.name }}</div>
+        <ul class="month-posts">
+          {% for post in month.items %}
             <li>
               <a href="{{ post.url }}">
                 {{ post.title }}
@@ -106,26 +128,28 @@
             </li>
           {% endfor %}
         </ul>
-      `;
-      
-      document.body.prepend(toggleButton);
-      document.body.prepend(sidebar);
-      
-      const mainContent = document.querySelector('.main-content');
-      
-      toggleButton.addEventListener('click', function() {
-        sidebar.classList.toggle('active');
-        mainContent.classList.toggle('shifted');
-      });
-      
-      // Close sidebar when clicking outside
-      document.addEventListener('click', function(event) {
-        if (!sidebar.contains(event.target) && 
-            !toggleButton.contains(event.target) && 
-            sidebar.classList.contains('active')) {
-          sidebar.classList.remove('active');
-          mainContent.classList.remove('shifted');
-        }
-      });
-    });
-    </script>
+      </div>
+    {% endfor %}
+  `;
+  
+  document.body.prepend(toggleButton);
+  document.body.prepend(sidebar);
+  
+  const mainContent = document.querySelector('.main-content');
+  
+  toggleButton.addEventListener('click', function() {
+    sidebar.classList.toggle('active');
+    mainContent.classList.toggle('shifted');
+  });
+  
+  // Close sidebar when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!sidebar.contains(event.target) && 
+        !toggleButton.contains(event.target) && 
+        sidebar.classList.contains('active')) {
+      sidebar.classList.remove('active');
+      mainContent.classList.remove('shifted');
+    }
+  });
+});
+</script>

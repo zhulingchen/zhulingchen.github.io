@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cursor AI Code Editor 智能指令"
-date:   2025-01-12 23:00:00 -0500
+date:   2025-01-13 00:00:00 -0500
 categories: 技术笔记
 tags: AI Cursor Prompt
 ---

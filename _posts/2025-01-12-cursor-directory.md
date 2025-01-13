@@ -10,6 +10,8 @@ tags: AI Cursor Prompt
 
 现在大家都在用Cursor AI Code Editor写代码了吧，就算不是日常使用，最起码能用它搭个项目的脚手架，一路就是Tab Tab Tab。
 
+![image](https://github.com/user-attachments/assets/39280127-6817-4438-b693-1b7d304c7f6f)
+
 就像我之前在做一个基于Markdown格式的[我的技术博客](https://zhulingchen.github.io/)，我完全都不会Jekyll，很多前端HTML和CSS的知识也都忘得七七八八了，但只要能清晰地描述诉求，Cursor就能很快帮你生成代码，简化了很多思考和debug的流程。
 
 ![image](https://github.com/user-attachments/assets/ce5387b1-198c-41b1-b220-b747a516ac03)

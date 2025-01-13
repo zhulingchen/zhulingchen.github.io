@@ -6,19 +6,25 @@ categories: 技术笔记
 tags: AI Cursor Prompt
 ---
 
-## 前言
+## Cursor AI Code Editor
 
-现在大家都在用Cursor AI Code Editor写代码了吧，就算不是日常使用，最起码能用它搭个项目的脚手架，一路就是Tab Tab Tab。
+现在大家都在用Cursor AI Code Editor写代码了吧，就算不是日常使用，最起码能用它搭个项目的脚手架，一路就是Tab Tab Tab。有时候你真的想知道，你是在写代码，还是在和Cursor聊天？
+
+Cursor可以用LLM智能补全代码，不仅减少了重复性编码工作，还能补全整个代码块。根据自然语言描述自动生成代码，大大提高编码效率，加快项目开发和调试速度，而且支持绝大多数编程语言和框架。
+
+此外，Cursor还可以根据项目结构和依赖关系，自动生成代码。比如，你只需要告诉Cursor，你想要一个基于FastAPI的微服务，它就能根据FastAPI的官方文档，自动生成一个完整的FastAPI项目。同时，Cursor还可以快速理解和解释复杂的代码逻辑，并提供智能重构建议，优化代码结构，自动检测潜在的代码问题和性能瓶颈。因为整个项目都在LLM的上下文里，所以Cursor可以快速理解你的需求，并给出最优的解决方案。
 
 ![image](https://github.com/user-attachments/assets/39280127-6817-4438-b693-1b7d304c7f6f)
 
-就像我之前在做一个基于Markdown格式的[我的技术博客](https://zhulingchen.github.io/)，我完全都不会Jekyll，很多前端HTML和CSS的知识也都忘得七七八八了，但只要能清晰地描述诉求，Cursor就能很快帮你生成代码，简化了很多思考和debug的流程。
+就像我之前在做一个基于Markdown格式的[我的技术博客](https://zhulingchen.github.io/)，我其实完全都不会Jekyll，很多前端HTML和CSS的知识也都忘得七七八八了，但只要能清晰地描述诉求，Cursor就能很快帮你生成代码，简化了很多思考和debug的流程。
 
 ![image](https://github.com/user-attachments/assets/ce5387b1-198c-41b1-b220-b747a516ac03)
 
-最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的 **Cursor AI Code Editor 智能指令**，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行。
+## 什么是 .cursorrules 文件？
 
-# # 什么是 .cursorrules 文件？
+在每一个用Cursor写的项目里，你都可以在项目根目录下创建一个 `.cursorrules` 文件，来定制Cursor的行为。`.cursorrules` 文件的重要性在于它能显著提升开发效率和代码质量。通过在项目中定制化 AI 助手的行为，开发者可以确保生成的代码始终符合团队的编码规范和最佳实践。这个文件不仅能帮助新团队成员快速适应项目的编码风格，还能为经验丰富的开发者提供智能的代码建议和重构方案。更重要的是，`.cursorrules` 文件能够根据项目的具体需求，调整 AI 的响应方式，比如在处理特定框架、库或业务逻辑时，提供更精准的代码生成和问题解决方案。这种项目级别的 AI 定制化不仅提高了代码的一致性，还能大大减少代码审查时的来回修改，使整个开发过程更加顺畅和高效。
+
+最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的`.cursorrules`模板，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行。
 
 .cursorrules 文件是自定义指令，用于指导 Cursor 中的 AI 助手，在解释代码、生成建议和回应查询时调整其行为。Cursor 规则有两种类型：
 - 全局规则：在 Cursor 设置中的“常规” > “AI 规则”下设置。这些规则适用于您所有的项目。

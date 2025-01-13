@@ -10,11 +10,11 @@ tags: AI Cursor Prompt
 
 现在大家都在用Cursor AI Code Editor写代码了吧，就算不是日常使用，最起码能用它搭个项目的脚手架，一路就是Tab Tab Tab。有时候你真的想知道，你是在写代码，还是在和Cursor聊天？
 
+![image](https://github.com/user-attachments/assets/39280127-6817-4438-b693-1b7d304c7f6f)
+
 Cursor可以用LLM智能补全代码，不仅减少了重复性编码工作，还能补全整个代码块。根据自然语言描述自动生成代码，大大提高编码效率，加快项目开发和调试速度，而且支持绝大多数编程语言和框架。
 
 此外，Cursor还可以根据项目结构和依赖关系，自动生成代码。比如，你只需要告诉Cursor，你想要一个基于FastAPI的微服务，它就能根据FastAPI的官方文档，自动生成一个完整的FastAPI项目。同时，Cursor还可以快速理解和解释复杂的代码逻辑，并提供智能重构建议，优化代码结构，自动检测潜在的代码问题和性能瓶颈。因为整个项目都在LLM的上下文里，所以Cursor可以快速理解你的需求，并给出最优的解决方案。
-
-![image](https://github.com/user-attachments/assets/39280127-6817-4438-b693-1b7d304c7f6f)
 
 就像我之前在做一个基于Markdown格式的[我的技术博客](https://zhulingchen.github.io/)，我其实完全都不会Jekyll，很多前端HTML和CSS的知识也都忘得七七八八了，但只要能清晰地描述诉求，Cursor就能很快帮你生成代码，简化了很多思考和debug的流程。
 

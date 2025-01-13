@@ -20,19 +20,17 @@ Cursor可以用LLM智能补全代码，不仅减少了重复性编码工作，�
 
 ![image](https://github.com/user-attachments/assets/ce5387b1-198c-41b1-b220-b747a516ac03)
 
-## 什么是 .cursorrules 文件？
-
-在每一个用Cursor写的项目里，你都可以在项目根目录下创建一个 `.cursorrules` 文件，来定制Cursor的行为。`.cursorrules` 文件的重要性在于它能显著提升开发效率和代码质量。通过在项目中定制化 AI 助手的行为，开发者可以确保生成的代码始终符合团队的编码规范和最佳实践。这个文件不仅能帮助新团队成员快速适应项目的编码风格，还能为经验丰富的开发者提供智能的代码建议和重构方案。更重要的是，`.cursorrules` 文件能够根据项目的具体需求，调整 AI 的响应方式，比如在处理特定框架、库或业务逻辑时，提供更精准的代码生成和问题解决方案。这种项目级别的 AI 定制化不仅提高了代码的一致性，还能大大减少代码审查时的来回修改，使整个开发过程更加顺畅和高效。
-
-最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的`.cursorrules`模板，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行。
-
-.cursorrules 文件是自定义指令，用于指导 Cursor 中的 AI 助手，在解释代码、生成建议和回应查询时调整其行为。
+就像带实习生那样，你可以制定一些指导规则，来指导Cursor的行为。
 
 Cursor 规则有两种类型：
 - 全局规则：在 Cursor 设置中的“常规” > “AI 规则”下设置。这些规则适用于您所有的项目。
 ![image](https://github.com/user-attachments/assets/3beedde6-3c1d-4887-8a71-3545d4b7c507)
 
-- 项目特定规则：在项目根目录中的 .cursorrules 文件中定义。这些规则仅适用于该项目。
+- 项目特定规则：在项目根目录中的`.cursorrules`文件中定义。这些规则仅适用于该项目。今天我们就来聊聊如何用`.cursorrules`文件来定制Cursor在项目中的行为。
+
+## 什么是 .cursorrules 文件？
+
+在每一个用Cursor写的项目里，你都可以在项目根目录下创建一个 `.cursorrules` 文件，来定制Cursor的行为。`.cursorrules` 文件的重要性在于它能显著提升开发效率和代码质量。通过在项目中定制化 AI 助手的行为，开发者可以确保生成的代码始终符合团队的编码规范和最佳实践。这个文件不仅能帮助新团队成员快速适应项目的编码风格，还能为经验丰富的开发者提供智能的代码建议和重构方案。更重要的是，`.cursorrules` 文件能够根据项目的具体需求，调整 AI 的响应方式，比如在处理特定框架、库或业务逻辑时，提供更精准的代码生成和问题解决方案。这种项目级别的 AI 定制化不仅提高了代码的一致性，还能大大减少代码审查时的来回修改，使整个开发过程更加顺畅和高效。
 
 通过项目的 .cursorrules 文件，您可以：
 - 自定义 AI 响应以匹配您的编码风格
@@ -40,18 +38,23 @@ Cursor 规则有两种类型：
 - 提高代码的一致性和质量
 - 精简您的开发工作流程
 
+最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的`.cursorrules`模板，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行。
+
 ## 有了这些“模板”，能干嘛？
 
-其实，道理并不复杂：**在这些模板里，包含了如何调用和配置各种服务的预设信息**，比方说——
+其实，道理并不复杂：**在这些模板里，包含了如何调用和配置各种服务的预设信息**，比方说：
 
-- **API**：如何发送请求、接收响应，甚至如何处理鉴权和错误。
-- **LLM**：如何通过接口整合类似 GPT 这样的 **大语言模型**，自动进行文本生成、总结或翻译。
-- **智能代理**：根据输入上下文和配置，自动执行后续流程，就像给 Cursor AI 装上一个“智慧大脑”，省去很多重复工作。
+- **命名规则**：如何给不同开发人员编写的代码以统一的风格命名，以提高代码的可读性和可维护性。
+- **库的调用**：如何调用和配置各种库，比如torch、transformers、diffusers等。
+- **代码风格**：如何编写符合团队标准的代码，比如使用PyTorch的DataLoader进行数据加载，使用Gradio创建交互式应用等。
+- **错误处理**：如何处理常见的错误，比如数据加载错误、模型推理错误等。
+- **性能优化**：如何优化代码的性能，比如使用GPU进行训练，使用混合精度进行训练等。
 
-简而言之，这些模板是现成的“脚手架”或“通关秘籍”，能让你的**全栈应用**插上更多“智能化”翅膀。
+简而言之，这些模板是现成的“脚手架”或“通关秘籍”，能让你的**全栈应用**插上更多智能的翅膀。
 
 ## 例子
 
+由于时间和篇幅限制，这里只展示一个模板，感兴趣的可以自己去[Cursor Directory](https://cursor.directory/)看看吧。
 ### 用Python实现深度学习和大预言模型开发
 
 ```
@@ -126,56 +129,6 @@ Key Conventions:
 Refer to the official documentation of PyTorch, Transformers, Diffusers, and Gradio for best practices and up-to-date APIs.
 ```
 
-### 用Python实现FastAPI服务器
-```
-  You are an expert in Python, FastAPI, microservices architecture, and serverless environments.
-  
-  Advanced Principles
-  - Design services to be stateless; leverage external storage and caches (e.g., Redis) for state persistence.
-  - Implement API gateways and reverse proxies (e.g., NGINX, Traefik) for handling traffic to microservices.
-  - Use circuit breakers and retries for resilient service communication.
-  - Favor serverless deployment for reduced infrastructure overhead in scalable environments.
-  - Use asynchronous workers (e.g., Celery, RQ) for handling background tasks efficiently.
-  
-  Microservices and API Gateway Integration
-  - Integrate FastAPI services with API Gateway solutions like Kong or AWS API Gateway.
-  - Use API Gateway for rate limiting, request transformation, and security filtering.
-  - Design APIs with clear separation of concerns to align with microservices principles.
-  - Implement inter-service communication using message brokers (e.g., RabbitMQ, Kafka) for event-driven architectures.
-  
-  Serverless and Cloud-Native Patterns
-  - Optimize FastAPI apps for serverless environments (e.g., AWS Lambda, Azure Functions) by minimizing cold start times.
-  - Package FastAPI applications using lightweight containers or as a standalone binary for deployment in serverless setups.
-  - Use managed services (e.g., AWS DynamoDB, Azure Cosmos DB) for scaling databases without operational overhead.
-  - Implement automatic scaling with serverless functions to handle variable loads effectively.
-  
-  Advanced Middleware and Security
-  - Implement custom middleware for detailed logging, tracing, and monitoring of API requests.
-  - Use OpenTelemetry or similar libraries for distributed tracing in microservices architectures.
-  - Apply security best practices: OAuth2 for secure API access, rate limiting, and DDoS protection.
-  - Use security headers (e.g., CORS, CSP) and implement content validation using tools like OWASP Zap.
-  
-  Optimizing for Performance and Scalability
-  - Leverage FastAPI’s async capabilities for handling large volumes of simultaneous connections efficiently.
-  - Optimize backend services for high throughput and low latency; use databases optimized for read-heavy workloads (e.g., Elasticsearch).
-  - Use caching layers (e.g., Redis, Memcached) to reduce load on primary databases and improve API response times.
-  - Apply load balancing and service mesh technologies (e.g., Istio, Linkerd) for better service-to-service communication and fault tolerance.
-  
-  Monitoring and Logging
-  - Use Prometheus and Grafana for monitoring FastAPI applications and setting up alerts.
-  - Implement structured logging for better log analysis and observability.
-  - Integrate with centralized logging systems (e.g., ELK Stack, AWS CloudWatch) for aggregated logging and monitoring.
-  
-  Key Conventions
-  1. Follow microservices principles for building scalable and maintainable services.
-  2. Optimize FastAPI applications for serverless and cloud-native deployments.
-  3. Apply advanced security, monitoring, and optimization techniques to ensure robust, performant APIs.
-  
-  Refer to FastAPI, microservices, and serverless documentation for best practices and advanced usage patterns.
-```
-
 ## 结语
 
-如果你也想体验一下传说中的“自动化”与“人工智能驱动”开发，不妨去 [Cursor Directory](https://cursor.directory/) 逛逛，尝试为自己的项目加上这些有趣的模板。
-
-**把握住新一代开发方式，没准儿你的下一个创意就能借助智能代理一飞冲天！**
+如果你也想体验更流畅的基于人工智能的Cursor开发流程，不妨去 [Cursor Directory](https://cursor.directory/) 逛逛，尝试为自己项目加上这些有趣的模板；看看Cursor的表现能给你带来多少惊喜。

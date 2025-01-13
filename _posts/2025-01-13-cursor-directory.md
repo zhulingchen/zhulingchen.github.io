@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cursor AI Code Editor 智能指令"
+title: "Cursor AI Code Editor 智能指令集 cursor.directory"
 date:   2025-01-13 00:00:00 -0500
 categories: 技术笔记
 tags: AI Cursor Prompt

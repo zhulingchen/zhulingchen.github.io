@@ -16,7 +16,7 @@ Cursor可以用LLM智能补全代码，不仅减少了重复性编码工作，�
 
 此外，Cursor还可以根据项目结构和依赖关系，自动生成代码。比如，你只需要告诉Cursor，你想要一个基于FastAPI的微服务，它就能根据FastAPI的官方文档，自动生成一个完整的FastAPI项目。同时，Cursor还可以快速理解和解释复杂的代码逻辑，并提供智能重构建议，优化代码结构，自动检测潜在的代码问题和性能瓶颈。因为整个项目都在LLM的上下文里，所以Cursor可以快速理解你的需求，并给出最优的解决方案。
 
-就像我之前在做一个基于Markdown格式的[我的技术博客](https://zhulingchen.github.io/)，我其实完全都不会Jekyll，很多前端HTML和CSS的知识也都忘得七七八八了，但只要能清晰地描述诉求，Cursor就能很快帮你生成代码，简化了很多思考和debug的流程。
+就像我之前在做一个基于Markdown格式的[我的技术博客](https://zhulingchen.github.io/)，我其实从来都没[用Jekyll写过GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)，而且很多前端HTML和CSS的知识我也都忘得七七八八了，但只要能清晰地描述诉求，Cursor就能很快帮你生成代码，简化了很多思考和debug的流程。
 
 ![image](https://github.com/user-attachments/assets/ce5387b1-198c-41b1-b220-b747a516ac03)
 

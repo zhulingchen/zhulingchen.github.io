@@ -1,20 +1,20 @@
 ---
 layout: post
-title: "Cursor AI Code Editor 智能指令集 cursor.directory"
-date:   2025-01-13 00:00:00 -0500
+title: "Cursor AI Code Editor 智能指令集 https://cursor.directory"
+date:   2025-01-13 12:00:00 -0500
 categories: 技术笔记
 tags: AI Cursor Prompt
 ---
 
 ## Cursor AI Code Editor
 
-现在大家都在用Cursor AI Code Editor写代码了吧，就算不是日常使用，最起码能用它搭个项目的脚手架，一路就是Tab Tab Tab。有时候你真的想知道，你是在写代码，还是在和Cursor聊天？
+现在大家都在用Cursor AI Code Editor写代码了吧，就算不是日常使用，最起码能聊几句就可以搭个项目的脚手架，一路就是Tab Tab Tab。有时候你真的想知道，你是在写代码，还是在通过Cursor和 AI 助手聊天？
 
 ![image](https://github.com/user-attachments/assets/39280127-6817-4438-b693-1b7d304c7f6f)
 
-Cursor可以用LLM智能补全代码，不仅减少了重复性编码工作，还能补全整个代码块。根据自然语言描述自动生成代码，大大提高编码效率，加快项目开发和调试速度，而且支持绝大多数编程语言和框架。
+Cursor可以用 AI 助手智能补全代码，不仅减少了重复性编码工作，还能补全整个代码块。根据自然语言描述自动生成代码，大大提高编码效率，加快项目开发和调试速度，而且支持绝大多数编程语言和框架。
 
-此外，Cursor还可以根据项目结构和依赖关系，自动生成代码。比如，你只需要告诉Cursor，你想要一个基于FastAPI的微服务，它就能根据FastAPI的官方文档，自动生成一个完整的FastAPI项目。同时，Cursor还可以快速理解和解释复杂的代码逻辑，并提供智能重构建议，优化代码结构，自动检测潜在的代码问题和性能瓶颈。因为整个项目都在LLM的上下文里，所以Cursor可以快速理解你的需求，并给出最优的解决方案。
+此外，Cursor还可以根据项目结构和依赖关系，自动生成代码。比如，你只需要告诉Cursor，你想要一个基于FastAPI的微服务，它就能根据FastAPI的官方文档和很多前人们在Stack Overflow上分享的解决方案和debug经验，自动生成一个完整的FastAPI项目。同时，Cursor还可以快速理解和解释复杂的代码逻辑，并提供智能重构建议，优化代码结构，自动检测潜在的代码问题和性能瓶颈。因为整个项目的代码和文档都在LLM的上下文里，所以Cursor可以快速理解你的需求，并给出最优的解决方案。
 
 就像我之前在做一个基于Markdown格式的[我的技术博客](https://zhulingchen.github.io/)，我其实从来都没[用Jekyll写过GitHub Pages](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)，而且很多前端HTML和CSS的知识我也都忘得七七八八了，但只要能清晰地描述诉求，Cursor就能很快帮你生成代码，简化了很多思考和debug的流程。
 
@@ -26,7 +26,7 @@ Cursor 规则有两种类型：
 - 全局规则：在 Cursor 设置中的“常规” > “AI 规则”下设置。这些规则适用于您所有的项目。
 ![image](https://github.com/user-attachments/assets/3beedde6-3c1d-4887-8a71-3545d4b7c507)
 
-- 项目特定规则：在项目根目录中的`.cursorrules`文件中定义。这些规则仅适用于该项目。今天我们就来聊聊如何用`.cursorrules`文件来定制Cursor在项目中的行为。
+- 项目特定规则：在项目根目录中的 `.cursorrules` 文件中定义。这些规则仅适用于该项目。今天我们就来聊聊如何用项目级的 `.cursorrules` 文件来定制Cursor在项目中的行为。
 
 ## 什么是 .cursorrules 文件？
 
@@ -38,7 +38,7 @@ Cursor 规则有两种类型：
 - 提高代码的一致性和质量
 - 精简您的开发工作流程
 
-最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的`.cursorrules`模板，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行。
+最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的 `.cursorrules` 模板，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行。
 
 ## 有了这些“模板”，能干嘛？
 
@@ -50,7 +50,7 @@ Cursor 规则有两种类型：
 - **错误处理**：如何处理常见的错误，比如数据加载错误、模型推理错误等。
 - **性能优化**：如何优化代码的性能，比如使用GPU进行训练，使用混合精度进行训练等。
 
-简而言之，这些模板是现成的“脚手架”或“通关秘籍”，能让你的**全栈应用**插上更多智能的翅膀。
+简而言之，这些模板是现成的“脚手架”或“通关秘籍”，能让你的应用程序插上更多智能的翅膀。
 
 ## 例子
 

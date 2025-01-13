@@ -40,6 +40,8 @@ Cursor 规则有两种类型：
 
 最近我发现了一个神奇的网站[Cursor Directory](https://cursor.directory/)。它专门收集了各种各样的 `.cursorrules` 模板，只需要把它们放在每个项目根目录下的 `.cursorrules` 文件就行。
 
+![image](https://github.com/user-attachments/assets/d52fb303-0c9a-42cd-9023-863fe31ef66a)
+
 ## 有了这些“模板”，能干嘛？
 
 其实，道理并不复杂：**在这些模板里，包含了如何调用和配置各种服务的预设信息**，比方说：
